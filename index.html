@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-base-200">
+    <main class="jat-app min-h-screen">
+        <div class="jat-container mx-auto px-6 py-10">
+
+    <!-- Header -->
+            <header class="jat-header">
+                <h1 class="jat-title text-2xl font-bold text-base-content">Job Application Tracker</h1>
+
+        <!-- Stats -->
+                <section class="jat-stats mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+                    <div class="jat-stat card bg-base-100 shadow-sm">
+                        <div class="card-body p-5">
+                        <div class="jat-stat-label text-xs text-base-content/60">Total</div>
+                        <div class="jat-stat-value text-xl font-bold" id="statTotal">8</div>
+                        </div>
+                    </div>
+
+                    <div class="jat-stat card bg-base-100 shadow-sm">
+                        <div class="card-body p-5">
+                        <div class="jat-stat-label text-xs text-base-content/60">Interview</div>
+                        <div class="jat-stat-value text-xl font-bold text-success" id="statInterview">0</div>
+                        </div>
+                    </div>
+
+                    <div class="jat-stat card bg-base-100 shadow-sm">
+                        <div class="card-body p-5">
+                        <div class="jat-stat-label text-xs text-base-content/60">Rejected</div>
+                        <div class="jat-stat-value text-xl font-bold text-error" id="statRejected">0</div>
+                        </div>
+                    </div>
+                </section>
+            </header>
+        </div>
+  </main>
+</body>
+</html>
