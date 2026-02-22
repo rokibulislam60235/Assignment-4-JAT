@@ -6,7 +6,19 @@
     <title>Assignment4</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: "Geist", sans-serif
+        }
+    </style>
 </head>
+
+
 <body class="bg-base-200">
     <main class="jat-app min-h-screen">
         <div class="jat-container mx-auto px-6 py-10">
@@ -41,7 +53,7 @@
             </header>
 
     <!-- Job Section -->
-            <section>
+            <section class="jat-jobs">
                 <div class="jat-jobs-head flex items-center justify-between">
                     <h2 class="jat-jobs-title text-sm font-semibold text-base-content/80">Available Jobs</h2>
                     <div class="jat-jobs-count text-xs text-base-content/60">
@@ -56,6 +68,282 @@
                         <button role="tab" class="tab" data-tab="interview">Interview</button>
                         <button role="tab" class="tab" data-tab="rejected">Rejected</button>
                     </div>
+                </div>
+                <!-- Job list -->
+                <div class="jat-job-list mt-5 space-y-4" id="jobList">
+                <!-- Job Card -->
+                    <article class="jat-job-card card bg-base-100 shadow-sm" data-job-id="1">
+                            <div class="card-body p-5">
+                                <div class="jat-job-top flex items-start justify-between gap-4">
+                                    <div class="jat-job-main">
+                                        <h3 class="jat-job-company font-semibold">Mobile First Corp</h3>
+                                        <p class="jat-job-role text-sm text-base-content/70">React Native Developer</p>
+                                        <p class="jat-job-meta mt-1 text-xs text-base-content/50">
+                                            Remote &nbsp;•&nbsp; Full-time &nbsp;•&nbsp; $130,000 - $175,000
+                                        </p>
+                                    </div>
+
+                                    <button class="jat-job-iconbtn btn btn-ghost btn-sm btn-circle" aria-label="More">
+                                    <!-- simple icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="mt-3">
+                                    <span class="jat-job-status badge badge-neutral badge-sm">NOT APPLIED</span>
+                                </div>
+
+                                <p class="jat-job-desc mt-3 text-sm text-base-content/70">
+                                    Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.
+                                </p>
+
+                                <div class="jat-job-actions mt-4 flex gap-2">
+                                    <button class="btn btn-outline btn-success btn-sm" data-action="interview">INTERVIEW</button>
+                                    <button class="btn btn-outline btn-error btn-sm" data-action="rejected">REJECTED</button>
+                                </div>
+                        </div>
+                    </article>
+
+                    <article class="jat-job-card card bg-base-100 shadow-sm" data-job-id="2">
+                            <div class="card-body p-5">
+                                <div class="jat-job-top flex items-start justify-between gap-4">
+                                    <div class="jat-job-main">
+                                        <h3 class="jat-job-company font-semibold">WebFlow Agency</h3>
+                                        <p class="jat-job-role text-sm text-base-content/70">Web Designer & Developer</p>
+                                        <p class="jat-job-meta mt-1 text-xs text-base-content/50">
+                                            Los Angeles, CA • Part-time • $80,000 - $120,000
+                                        </p>
+                                    </div>
+
+                                    <button class="jat-job-iconbtn btn btn-ghost btn-sm btn-circle" aria-label="More">
+                                    <!-- simple icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="mt-3">
+                                    <span class="jat-job-status badge badge-neutral badge-sm">NOT APPLIED</span>
+                                </div>
+
+                                <p class="jat-job-desc mt-3 text-sm text-base-content/70">
+                                    Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.
+                                </p>
+
+                                <div class="jat-job-actions mt-4 flex gap-2">
+                                    <button class="btn btn-outline btn-success btn-sm" data-action="interview">INTERVIEW</button>
+                                    <button class="btn btn-outline btn-error btn-sm" data-action="rejected">REJECTED</button>
+                                </div>
+                        </div>
+                    </article>
+                    
+                    <article class="jat-job-card card bg-base-100 shadow-sm" data-job-id="3">
+                            <div class="card-body p-5">
+                                <div class="jat-job-top flex items-start justify-between gap-4">
+                                    <div class="jat-job-main">
+                                        <h3 class="jat-job-company font-semibold">DataViz Solutions</h3>
+                                        <p class="jat-job-role text-sm text-base-content/70">Data Visualization Specialist</p>
+                                        <p class="jat-job-meta mt-1 text-xs text-base-content/50">
+                                            Boston,MA &nbsp;•&nbsp; Full-time &nbsp;•&nbsp; $100,000 - $150,000
+                                        </p>
+                                    </div>
+
+                                    <button class="jat-job-iconbtn btn btn-ghost btn-sm btn-circle" aria-label="More">
+                                    <!-- simple icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="mt-3">
+                                    <span class="jat-job-status badge badge-neutral badge-sm">NOT APPLIED</span>
+                                </div>
+
+                                <p class="jat-job-desc mt-3 text-sm text-base-content/70">
+                                    Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+                                </p>
+
+                                <div class="jat-job-actions mt-4 flex gap-2">
+                                    <button class="btn btn-outline btn-success btn-sm" data-action="interview">INTERVIEW</button>
+                                    <button class="btn btn-outline btn-error btn-sm" data-action="rejected">REJECTED</button>
+                                </div>
+                        </div>
+                    </article>
+
+                    <article class="jat-job-card card bg-base-100 shadow-sm" data-job-id="4">
+                            <div class="card-body p-5">
+                                <div class="jat-job-top flex items-start justify-between gap-4">
+                                    <div class="jat-job-main">
+                                        <h3 class="jat-job-company font-semibold">CloudFirst Inc</h3>
+                                        <p class="jat-job-role text-sm text-base-content/70">Backend Developer</p>
+                                        <p class="jat-job-meta mt-1 text-xs text-base-content/50">
+                                            Texas,CA &nbsp;•&nbsp; Full-time &nbsp;•&nbsp; $150,000 - $200,000
+                                        </p>
+                                    </div>
+
+                                    <button class="jat-job-iconbtn btn btn-ghost btn-sm btn-circle" aria-label="More">
+                                    <!-- simple icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="mt-3">
+                                    <span class="jat-job-status badge badge-neutral badge-sm">NOT APPLIED</span>
+                                </div>
+
+                                <p class="jat-job-desc mt-3 text-sm text-base-content/70">
+                                    Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.
+                                </p>
+
+                                <div class="jat-job-actions mt-4 flex gap-2">
+                                    <button class="btn btn-outline btn-success btn-sm" data-action="interview">INTERVIEW</button>
+                                    <button class="btn btn-outline btn-error btn-sm" data-action="rejected">REJECTED</button>
+                                </div>
+                        </div>
+                    </article>
+
+                    <article class="jat-job-card card bg-base-100 shadow-sm" data-job-id="5">
+                            <div class="card-body p-5">
+                                <div class="jat-job-top flex items-start justify-between gap-4">
+                                    <div class="jat-job-main">
+                                        <h3 class="jat-job-company font-semibold">Innovation Labs</h3>
+                                        <p class="jat-job-role text-sm text-base-content/70">UI/UX Engineer</p>
+                                        <p class="jat-job-meta mt-1 text-xs text-base-content/50">
+                                            Remote &nbsp;•&nbsp; Full-time &nbsp;•&nbsp; $100,000 - $115,000
+                                        </p>
+                                    </div>
+
+                                    <button class="jat-job-iconbtn btn btn-ghost btn-sm btn-circle" aria-label="More">
+                                    <!-- simple icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="mt-3">
+                                    <span class="jat-job-status badge badge-neutral badge-sm">NOT APPLIED</span>
+                                </div>
+
+                                <p class="jat-job-desc mt-3 text-sm text-base-content/70">
+                                    Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.
+                                </p>
+
+                                <div class="jat-job-actions mt-4 flex gap-2">
+                                    <button class="btn btn-outline btn-success btn-sm" data-action="interview">INTERVIEW</button>
+                                    <button class="btn btn-outline btn-error btn-sm" data-action="rejected">REJECTED</button>
+                                </div>
+                        </div>
+                    </article>
+
+                    <article class="jat-job-card card bg-base-100 shadow-sm" data-job-id="6">
+                            <div class="card-body p-5">
+                                <div class="jat-job-top flex items-start justify-between gap-4">
+                                    <div class="jat-job-main">
+                                        <h3 class="jat-job-company font-semibold">MegaCorp Solutions</h3>
+                                        <p class="jat-job-role text-sm text-base-content/70">JavaScript Developer</p>
+                                        <p class="jat-job-meta mt-1 text-xs text-base-content/50">
+                                            Remote &nbsp;•&nbsp; Full-time &nbsp;•&nbsp; $150,000 - $175,000
+                                        </p>
+                                    </div>
+
+                                    <button class="jat-job-iconbtn btn btn-ghost btn-sm btn-circle" aria-label="More">
+                                    <!-- simple icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="mt-3">
+                                    <span class="jat-job-status badge badge-neutral badge-sm">NOT APPLIED</span>
+                                </div>
+
+                                <p class="jat-job-desc mt-3 text-sm text-base-content/70">
+                                    Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.
+                                </p>
+
+                                <div class="jat-job-actions mt-4 flex gap-2">
+                                    <button class="btn btn-outline btn-success btn-sm" data-action="interview">INTERVIEW</button>
+                                    <button class="btn btn-outline btn-error btn-sm" data-action="rejected">REJECTED</button>
+                                </div>
+                        </div>
+                    </article>
+
+                    <article class="jat-job-card card bg-base-100 shadow-sm" data-job-id="7">
+                            <div class="card-body p-5">
+                                <div class="jat-job-top flex items-start justify-between gap-4">
+                                    <div class="jat-job-main">
+                                        <h3 class="jat-job-company font-semibold">StartupXYZ</h3>
+                                        <p class="jat-job-role text-sm text-base-content/70">Full Stack Engineer</p>
+                                        <p class="jat-job-meta mt-1 text-xs text-base-content/50">
+                                            Remote &nbsp;•&nbsp; Full-time &nbsp;•&nbsp; $175,000 - $200,000
+                                        </p>
+                                    </div>
+
+                                    <button class="jat-job-iconbtn btn btn-ghost btn-sm btn-circle" aria-label="More">
+                                    <!-- simple icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="mt-3">
+                                    <span class="jat-job-status badge badge-neutral badge-sm">NOT APPLIED</span>
+                                </div>
+
+                                <p class="jat-job-desc mt-3 text-sm text-base-content/70">
+                                    Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.
+                                </p>
+
+                                <div class="jat-job-actions mt-4 flex gap-2">
+                                    <button class="btn btn-outline btn-success btn-sm" data-action="interview">INTERVIEW</button>
+                                    <button class="btn btn-outline btn-error btn-sm" data-action="rejected">REJECTED</button>
+                                </div>
+                        </div>
+                    </article>
+    
+                    <article class="jat-job-card card bg-base-100 shadow-sm" data-job-id="8">
+                            <div class="card-body p-5">
+                                <div class="jat-job-top flex items-start justify-between gap-4">
+                                    <div class="jat-job-main">
+                                        <h3 class="jat-job-company font-semibold">TechCorp Industries</h3>
+                                        <p class="jat-job-role text-sm text-base-content/70">Senior Frontend Developer</p>
+                                        <p class="jat-job-meta mt-1 text-xs text-base-content/50">
+                                            Remote &nbsp;•&nbsp; Full-time &nbsp;•&nbsp; $50,000 - $100,000
+                                        </p>
+                                    </div>
+
+                                    <button class="jat-job-iconbtn btn btn-ghost btn-sm btn-circle" aria-label="More">
+                                    <!-- simple icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="mt-3">
+                                    <span class="jat-job-status badge badge-neutral badge-sm">NOT APPLIED</span>
+                                </div>
+
+                                <p class="jat-job-desc mt-3 text-sm text-base-content/70">
+                                    We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.
+                                </p>
+
+                                <div class="jat-job-actions mt-4 flex gap-2">
+                                    <button class="btn btn-outline btn-success btn-sm" data-action="interview">INTERVIEW</button>
+                                    <button class="btn btn-outline btn-error btn-sm" data-action="rejected">REJECTED</button>
+                                </div>
+                        </div>
+                    </article>
+
                 </div>
             </section>
         </div>
