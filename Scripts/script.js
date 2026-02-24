@@ -91,6 +91,25 @@ function updateAll() {
       }
     }
 
+      // ----- Not applied section responsive with buttons //
+const badge = card.querySelector(".jat-job-status");
+
+if (badge) {
+  if (jobStatus === "interview") {
+    badge.innerText = "INTERVIEW";
+    badge.classList.remove("badge-neutral", "badge-error");
+    badge.classList.add("badge-success");
+  } else if (jobStatus === "rejected") {
+    badge.innerText = "REJECTED";
+    badge.classList.remove("badge-neutral", "badge-success");
+    badge.classList.add("badge-error");
+  } else {
+    badge.innerText = "NOT APPLIED";
+    badge.classList.remove("badge-success", "badge-error");
+    badge.classList.add("badge-neutral");
+  }
+}
+
     //deleted hole,
     if (jobStatus === null) {
       card.style.display = "none";
